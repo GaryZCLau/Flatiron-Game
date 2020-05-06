@@ -61,31 +61,6 @@ let mainDiv = document.querySelector('#main')
     // select action menu data
     let tmList = document.querySelector('#list-them');
 
-
-    // select player
-    let playerName = document.querySelector("#player-name")
-    let playerImage = document.querySelector("#player-img")
-
-    // select skills
-    // let skillsList = document.querySelector("#list-them")
-    // items
-    let item1 = document.querySelector("#item1")
-    let item2 = document.querySelector("#item2")
-    let item3 = document.querySelector("#item3")
-    let item4 = document.querySelector("#item4")
-    let item5 = document.querySelector("#item5")
-    // attributes
-
-    // select npc
-    let npcName = document.querySelector('#other-name')
-    let npcImage = document.querySelector('#other-img')
-    let npcDesc = document.querySelector("#desc")
-
-    // select event w/choices
-    let eventString = document.querySelector('#event-string')
-    let choicesUl = document.querySelector("ul.choices-ul")
-
-
 // END QUERY SELECTORS
 
 
@@ -190,6 +165,34 @@ function playSound(soundfile) {
         // make main game screen visible
         mainDiv.innerHTML = startSchool;
 
+        // select player
+        let playerName = document.querySelector("#player-name")
+        let playerImage = document.querySelector("#player-img")
+
+        // select skills
+        // let skillsList = document.querySelector("#list-them")
+
+        // items
+        let item1 = document.querySelector("#item1")
+        let item2 = document.querySelector("#item2")
+        let item3 = document.querySelector("#item3")
+        let item4 = document.querySelector("#item4")
+        let item5 = document.querySelector("#item5")
+
+        // attributes
+        let health = document.querySelector("#health")
+        let mood = document.querySelector("#mood")
+        let stress = document.querySelector("#stress")
+
+        // select npc
+        let npcName = document.querySelector('#other-name')
+        let npcImage = document.querySelector('#other-img')
+        let npcDesc = document.querySelector("#desc")
+
+        // select event w/choices
+        let eventString = document.querySelector('#event-string')
+        let choicesUl = document.querySelector("ul.choices-ul")
+
         // initial fetch player + skill
         getPlayersObj()
         .then((playerObj) => {
@@ -205,6 +208,11 @@ function playSound(soundfile) {
             
             // items
             // item1.innerText = playerObj[0].items[0].name
+
+            // attributes
+            // health.innerText = Heath: 
+            // mood.innerText = Mood: 
+            // stress.innerText = Stress: 
         })
         
         // fetch event/npc/choice
