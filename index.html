@@ -6,10 +6,59 @@
     
     <link rel="stylesheet" href="index.css">
     <script defer src="index.js" type="text/javascript"></script>
-
     <title>Flatiron: The Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <span id="dummy"></span>
+    <div id="player-info">
+        <table id="action-menu">
+            <tr>
+            <td id="cells"><img src="icons/skills.png" id="skills-icon"><br><span id="skills-word">SKILLS</span></td> 
+            <td id="cells"><img src="icons/backpack.png" id="bag-icon"><br>BAG</td> 
+            <td id="cells"> <img src="icons/attr.png" id="attr-icon"><br>ATTRIBUTES</td>
+            </tr>
+        </table>
+        <div id="action-toggle-menu">
+            <div id="close-window">
+                <img src="icons/closewindow.png" id = "close-window-con" width="25px"> 
+            </div>
+           
+                <table id="list-them">
+                    <tr>
+                        <td><font color="#b75166">ruby</font></td>
+                        <td>rack</td>
+                        <td>sinatra</td>
+                    </tr>
+                    <tr>
+                        <td><font color="#b75166">html</font></td>
+                        <td>cli basics</td>
+                        <td>javascript</td>
+                    </tr>
+                    <tr>
+                        <td>rails</td>
+                        <td>react</td>
+                        <td>redux</td>
+                    </tr>
+                    <tr>
+                        <td>github</td>
+                        <td>ajax</td>
+                        <td>git workflow</td>
+                    </tr>
+                    <tr>
+                        <td>active record</td>
+                        <td><font color="#b75166">css</font></td>
+                        <td>OOP</td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+   
+
     <div id="main"> <!--- begin main div-->
 
   <div id="welcome">
@@ -20,80 +69,37 @@
     </div> <!--- end main div-->
 
     <div id="unseen">
-
-            <div id="new-game">
-                <p class = "name" id="other-name">NPC NAME HERE</p>
-                  <img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png" alt="Player Image">
-                  <p class = "npc-title">NPC TITLE HERE</p>
-                  <hr>
-                  <p id="event">EVENT STRING HERE</p>
-                  
-                    <label for="player-name">Write Name On Name Tag:</label><br>
-                    <input type="text" id="player-name"> </input>
-                    <button id="player-name-submit">Submit</button>
-              </div>
+        <audio id="audio" src="sounds/click.wav"></audio>
+        <button onclick="clickSound">click sound success</button>
+    
 
 
               <div id="gameplay">
 
-                <title>Flatiron: The Game</title>
-            </head>
-            <body>
                 <h1>Flatiron: The Game</h1>
-            
-                <div id = "leftbox">
+
+            <div id = "leftbox">
                     <p class = "name" id="player-name">Player Name</p>
-                    <img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png" alt="Player Image">
-                    <div>Health: 100</div>
+                    <img src="/users/gabriellenoel/mod3-frontend/characters/gabby.png" alt="Player Image" id="player-img">
+                    <div>-</div>
                 </div>
             
                 <div id = "rightbox">        
                     <p class = "name" id="other-name">Event/Boss</p>
-                    <img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png" alt="Player Image">
+                    <img src="/users/gabriellenoel/mod3-frontend/characters/signe.png" alt="Player Image" id="player-img">
                     <div id="desc">Description</div>
                 </div>
-            
-                <hr>
-            
-                <p id="event">This is where the event string/story will go</p>
-                <div>
-                    <table class = "items-table"> 
-                        <tr>
-                            <th>Items</th>
-                        </tr>
-                        <tr>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>item 2</td>
-                        </tr>
-                        <tr>
-                            <td>item 3</td>
-                        </tr>
-                    </table>
-            
-                    <table class = "skills-table"> 
-                        <tr>
-                            <th>Skills</th>
-                        </tr>
-                        <tr>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>skill 2</td>
-                        </tr>
-                        <tr>
-                            <td>skill 3</td>
-                        </tr>
-                    </table>
-            
+           <br><br><br>
+                    <p id="event-string">
+                        This is where the event string/story will go.
+                    </p>
                     <ul class = "choices-ul">
-                        <li>Choice1</li>
-                        <li>Choice2</li>
-                        <li>Choice3</li>
+                        <li></a>Choice 1</li>
+                        <li>Choice 2</li>
+                        <li>Choice 3</li>
                     </ul>
                 </div>
-
+                </div>
     </div>
 
 
