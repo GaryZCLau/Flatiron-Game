@@ -58,7 +58,32 @@ let mainDiv = document.querySelector('#main')
 
     // end action toggle menu query selectors
 
+    // select action menu data
     let tmList = document.querySelector('#list-them');
+
+
+    // select player
+    let playerName = document.querySelector("#player-name")
+    let playerImage = document.querySelector("#player-img")
+
+    // select skills
+    // let skillsList = document.querySelector("#list-them")
+    // items
+    let item1 = document.querySelector("#item1")
+    let item2 = document.querySelector("#item2")
+    let item3 = document.querySelector("#item3")
+    let item4 = document.querySelector("#item4")
+    let item5 = document.querySelector("#item5")
+    // attributes
+
+    // select npc
+    let npcName = document.querySelector('#other-name')
+    let npcImage = document.querySelector('#other-img')
+    let npcDesc = document.querySelector("#desc")
+
+    // select event w/choices
+    let eventString = document.querySelector('#event-string')
+    let choicesUl = document.querySelector("ul.choices-ul")
 
 
 // END QUERY SELECTORS
@@ -152,149 +177,9 @@ function playSound(soundfile) {
         } )
 
     // END TOGGLE MENU LISTENERS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
-    
-    
+
+
     // listens for user clicking start menu on welcome screen
     startButton.addEventListener('click', function() {
         // replace start with gameplay inner html
@@ -304,27 +189,8 @@ function playSound(soundfile) {
         
         // make main game screen visible
         mainDiv.innerHTML = startSchool;
-        
-    // identify gameplay inner html
 
-        // player
-        let playerName = document.querySelector("#player-name")
-        let playerImage = document.querySelector("#player-img")
-        // attributes
-
-        // skills
-        let skillsList = document.querySelector("#list-them")
-        // items
-
-        // npc
-        let npcName = document.querySelector('#other-name')
-        let npcImage = document.querySelector('#other-img')
-        let npcDesc = document.querySelector("#desc")
-        // event w/choices
-        let eventString = document.querySelector('#event-string')
-        let choicesUl = document.querySelector("ul.choices-ul")
-        
-        // fetch player + skill
+        // initial fetch player + skill
         getPlayersObj()
         .then((playerObj) => {
             playerName.innerText = playerObj[0].name
@@ -337,9 +203,8 @@ function playSound(soundfile) {
             //     td.append(tr)
             //     skillsList.append(td)
             
-            // items?
-            
-            
+            // items
+            // item1.innerText = playerObj[0].items[0].name
         })
         
         // fetch event/npc/choice
@@ -361,7 +226,4 @@ function playSound(soundfile) {
             })
         })
         // 
-        
-
-    
     });
