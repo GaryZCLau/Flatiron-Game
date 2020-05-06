@@ -61,25 +61,6 @@ let mainDiv = document.querySelector('#main')
     // select action menu data
     let tmList = document.querySelector('#list-them');
 
-
-    // select player
-    let playerName = document.querySelector("#player-name")
-    let playerImage = document.querySelector("#player-img")
-
-    // select skills
-    let skillsList = document.querySelector("#list-them")
-    // items
-
-    // select npc
-    let npcName = document.querySelector('#other-name')
-    let npcImage = document.querySelector('#other-img')
-    let npcDesc = document.querySelector("#desc")
-
-    // select event w/choices
-    let eventString = document.querySelector('#event-string')
-    let choicesUl = document.querySelector("ul.choices-ul")
-
-
 // END QUERY SELECTORS
 
 
@@ -171,149 +152,9 @@ function playSound(soundfile) {
         } )
 
     // END TOGGLE MENU LISTENERS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
-    
-    
+
+
     // listens for user clicking start menu on welcome screen
     startButton.addEventListener('click', function() {
         // replace start with gameplay inner html
@@ -324,49 +165,73 @@ function playSound(soundfile) {
         // make main game screen visible
         mainDiv.innerHTML = startSchool;
 
+        // select player
+        let playerName = document.querySelector("#player-name")
+        let playerImage = document.querySelector("#player-img")
 
-        
-    // identify gameplay inner html
+        // select skills
+        // let skillsList = document.querySelector("#list-them")
 
-        let newChoiceLi = document.createElement("li")
+        // items
+        let item1 = document.querySelector("#item1")
+        let item2 = document.querySelector("#item2")
+        let item3 = document.querySelector("#item3")
+        let item4 = document.querySelector("#item4")
+        let item5 = document.querySelector("#item5")
 
-        // fetch player + skill
+        // attributes
+        let health = document.querySelector("#health")
+        let mood = document.querySelector("#mood")
+        let stress = document.querySelector("#stress")
+
+        // select npc
+        let npcName = document.querySelector('#other-name')
+        let npcImage = document.querySelector('#other-img')
+        let npcDesc = document.querySelector("#desc")
+
+        // select event w/choices
+        let eventString = document.querySelector('#event-string')
+        let choicesUl = document.querySelector("ul.choices-ul")
+
+        // initial fetch player + skill
         getPlayersObj()
-            .then((playerObj) => {
-                playerName.innerText = playerObj[0].name
-                playerImage.src = `characters/${playerObj[0].image}`
-                // skills
-                // playerObj[0].skills
-                //     let td = document.createElement("td")
-                //     let tr = document.createElement("tr")
-                //     tr.innerText = playerObj[0].skills[0].name
-                //     td.append(tr)
-                //     skillsList.append(td)
+        .then((playerObj) => {
+            playerName.innerText = playerObj[0].name
+            playerImage.src = `characters/${playerObj[0].image}`
+            // skills
+            // playerObj[0].skills
+            //     let td = document.createElement("td")
+            //     let tr = document.createElement("tr")
+            //     tr.innerText = playerObj[0].skills[0].name
+            //     td.append(tr)
+            //     skillsList.append(td)
+            
+            // items
+            // item1.innerText = playerObj[0].items[0].name
 
-                // items?
-
-
-            })
-
+            // attributes
+            // health.innerText = Heath: 
+            // mood.innerText = Mood: 
+            // stress.innerText = Stress: 
+        })
+        
         // fetch event/npc/choice
         getEventsObj()
-            .then((eventObj) => {
-                // event
-                eventString.innerText = eventObj[0].content
-                // npc
-                npcName.innerText = eventObj[0].npc.name
-                npcImage.src = `characters/${eventObj[0].npc.image}`
-                npcDesc.innerText = eventObj[0].npc.description
-                // choice
-                choicesUl.innerHTML = ""
-                eventObj[0].choices.forEach((choice) => {
-                    newChoiceLi.innerText = choice.option
-                    choicesUl.append(newChoiceLi)
-                    // add clickevent listener for ChoiceLi
-                })
+        .then((eventObj) => {
+            // event
+            eventString.innerText = eventObj[0].content
+            // npc
+            npcName.innerText = eventObj[0].npc.name
+            npcImage.src = `characters/${eventObj[0].npc.image}`
+            npcDesc.innerText = eventObj[0].npc.description
+            // choice
+            choicesUl.innerHTML = ""
+            eventObj[0].choices.forEach((choice) => {
+                let newChoiceLi = document.createElement("li")
+                newChoiceLi.innerText = choice.option
+                choicesUl.append(newChoiceLi)
+                // add clickevent listener for ChoiceLi
             })
+        })
         // 
-
-
-    
     });
