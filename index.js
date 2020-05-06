@@ -45,54 +45,151 @@ closeSkills.addEventListener('click', function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // when button is clicked
 startButton.addEventListener('click', function() {
     // replace it with gameplay inner html
-        document.body.setAttribute("style", "background-image: url('/users/gabriellenoel/mod3-frontend/backgrounds/flatiron2.png')")
+        document.body.setAttribute("style", "background-image: url('backgrounds/flatiron2.png')")
         mainDiv.innerHTML = startSchool;
         playerBox.setAttribute("style", "visibility: visible");
         
         let eventString = document.querySelector('#event')
         let npc = document.querySelector('#other-name')
 
-    // get data from backend - seed data
-    fetch('http://localhost:3000/events/npc')
-    .then(function(resp) {
-        return resp.json();
-      })
-      .then(function(data) {
-        
-
-        })
-
-
-
-
-
-        let playerName = document.querySelector('#player-name')
-        let name = "Fetch Name Here" // set name to fetch data
-        playerName.innerText = name 
 
     });
-
-    
-    
-    
-    
-    
-    // function updateDisplay(message){ //fuction to add new text to textbox
-    //     let message = {
-    //         name: 
-    //     }
-
-
-    //     let otherName = document.querySelector('#other-name') // get name p class
-
-
-        
-        
-        
-    //     var msg = message;
-    //     var txtBox = document.getElementById("storyText"); //set txtBox to contents of textbox
-    //     txtBox.value = msg + "\n\n" + txtBox.value; //append new message to textbox
-    // }

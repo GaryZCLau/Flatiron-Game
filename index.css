@@ -99,7 +99,7 @@ h1 {
 }
 
 #gameplay {
-    background: url(flatiron.png);
+    background: url("mod3-front/backgrounds/flatiron.png");
     background-repeat: no-repeat;
     background-size: auto;
     text-align: center;
