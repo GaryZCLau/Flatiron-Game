@@ -1,8 +1,107 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    cursor: pointer;
+}
+
 h1 {
     text-align: center;
 }
 
-div {
+/* div {
+} */
+
+#main { text-align: center; }
+
+#player-info {
+    background-image: url('backgrounds/actions.png');
+    background-repeat: no-repeat;
+    top: 5px;
+    left: 0px;
+    position: absolute;
+    overflow: auto;
+    width: 250px;
+    height: 290px;
+    visibility: hidden;
+}
+
+#action-menu {
+    width: 90%;
+    height: 80px;
+    text-align: center;
+    margin-left:auto; 
+    margin-right:auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 8pt;
+}
+
+#skills-word:hover, #skills-icon:hover {
+    cursor: pointer;
+}
+
+#action-toggle-menu{
+    background-image: url('backgrounds/actiontoggle.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    visibility: hidden;
+}
+
+#list-them {
+    text-align: center;
+    width: 94%;
+    height: 78%;
+    margin-top: 32px;
+    margin-left: 7px;
+    border-top: 1px dashed black;
+}
+
+#complete {
+    color: #b75166;
+}
+
+#list-them tr {
+    height: 15%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 7pt;
+    text-transform: uppercase;
+}
+
+#close-window {
+    width: 95%;
+}
+
+#close-window-con {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+#cells {
+    width:30%;
+}
+
+#skills-icon {
+    width: 30px;
+    height: auto;
+}
+
+#bag-icon {
+    width: 30px;
+    height: auto;
+}
+
+#attr-icon {
+    width: 30px;
+    height: auto;
+}
+
+#gameplay {
+    background: url(flatiron.png);
+    background-repeat: no-repeat;
+    background-size: auto;
     text-align: center;
 }
 
@@ -18,11 +117,23 @@ div {
 #rightbox{ 
     float:right;
     width:50%;
-} 
+}
 
-#event {
+#player-name {
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+#player-img {
+    width: 236px;
+
+}
+
+#event-string {
     text-align: center;
-    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10pt;
+    width: 100%;
     
 }
 
@@ -32,24 +143,22 @@ ul {
     margin-top: 0px
 }
 
-.items-table {
+/* .items-table {
     float: left;
     width: 10%;
     border: 1px solid red;
     margin-right: 10px
 
-}
+} */
 
-.skills-table {
+/* .skills-table {
     float: left;
     width: 10%;
     border: 1px solid red
-}
+} */
 
 .choices-ul {
-    float: right;
-    width: 75%;
-    border: 1px solid red
+    width: 95%;
 }
 
 .name {
@@ -57,7 +166,13 @@ ul {
 }
 
 li {
-    margin-bottom: 1em
+    margin-bottom: 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 9pt;
+    background-color: #362f2d;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 th {
