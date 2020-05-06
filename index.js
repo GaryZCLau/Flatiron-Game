@@ -183,13 +183,67 @@ closeSkills.addEventListener('click', function(){
 
 // when button is clicked
 startButton.addEventListener('click', function() {
-    // replace it with gameplay inner html
+    // replace start with gameplay inner html
         document.body.setAttribute("style", "background-image: url('backgrounds/flatiron2.png')")
         mainDiv.innerHTML = startSchool;
         playerBox.setAttribute("style", "visibility: visible");
         
-        let eventString = document.querySelector('#event')
-        let npc = document.querySelector('#other-name')
+    // identify gameplay inner html
+
+        // player
+        let playerName = document.querySelector("#player-name")
+        let playerImage = document.querySelector("#player-img")
+        // attributes
+
+        // skills
+        let skillsList = document.querySelector("#list-them")
+        // items
+
+        // npc
+        let npcName = document.querySelector('#other-name')
+        let npcImage = document.querySelector('#other-img')
+        let npcDesc = document.querySelector("#desc")
+        // event w/choices
+        let eventString = document.querySelector('#event-string')
+        let choicesUl = document.querySelector("ul.choices-ul")
+        let newChoiceLi = document.createElement("li")
+
+        // fetch player + skill
+        getPlayersObj()
+            .then((playerObj) => {
+                playerName.innerText = playerObj[0].name
+                playerImage.src = `characters/${playerObj[0].image}`
+                // skills
+                // playerObj[0].skills
+                //     let td = document.createElement("td")
+                //     let tr = document.createElement("tr")
+                //     tr.innerText = playerObj[0].skills[0].name
+                //     td.append(tr)
+                //     skillsList.append(td)
+
+                // items?
+
+
+            })
+
+        // fetch event/npc/choice
+        getEventsObj()
+            .then((eventObj) => {
+                // event
+                eventString.innerText = eventObj[0].content
+                // npc
+                npcName.innerText = eventObj[0].npc.name
+                npcImage.src = `characters/${eventObj[0].npc.image}`
+                npcDesc.innerText = eventObj[0].npc.description
+                // choice
+                choicesUl.innerHTML = ""
+                eventObj[0].choices.forEach((choice) => {
+                    newChoiceLi.innerText = choice.option
+                    choicesUl.append(newChoiceLi)
+                    // add clickevent listener for ChoiceLi
+                })
+            })
+        // 
 
 
     });

@@ -121,12 +121,15 @@ h1 {
 
 #player-name {
     font-family: 'Roboto Mono', monospace;
-    text-transform: uppercase;
 }
 
 #player-img {
     width: 236px;
 
+}
+
+#other-img {
+    width: 236px
 }
 
 #event-string {
