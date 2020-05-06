@@ -58,6 +58,7 @@ let mainDiv = document.querySelector('#main')
 
     // end action toggle menu query selectors
 
+    // select action menu data
     let tmList = document.querySelector('#list-them');
 
 
