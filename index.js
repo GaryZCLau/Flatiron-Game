@@ -61,6 +61,24 @@ let mainDiv = document.querySelector('#main')
     let tmList = document.querySelector('#list-them');
 
 
+    // select player
+    let playerName = document.querySelector("#player-name")
+    let playerImage = document.querySelector("#player-img")
+
+    // select skills
+    let skillsList = document.querySelector("#list-them")
+    // items
+
+    // select npc
+    let npcName = document.querySelector('#other-name')
+    let npcImage = document.querySelector('#other-img')
+    let npcDesc = document.querySelector("#desc")
+
+    // select event w/choices
+    let eventString = document.querySelector('#event-string')
+    let choicesUl = document.querySelector("ul.choices-ul")
+
+
 // END QUERY SELECTORS
 
 
@@ -304,25 +322,11 @@ function playSound(soundfile) {
         
         // make main game screen visible
         mainDiv.innerHTML = startSchool;
+
+
         
     // identify gameplay inner html
 
-        // player
-        let playerName = document.querySelector("#player-name")
-        let playerImage = document.querySelector("#player-img")
-        // attributes
-
-        // skills
-        let skillsList = document.querySelector("#list-them")
-        // items
-
-        // npc
-        let npcName = document.querySelector('#other-name')
-        let npcImage = document.querySelector('#other-img')
-        let npcDesc = document.querySelector("#desc")
-        // event w/choices
-        let eventString = document.querySelector('#event-string')
-        let choicesUl = document.querySelector("ul.choices-ul")
         let newChoiceLi = document.createElement("li")
 
         // fetch player + skill
