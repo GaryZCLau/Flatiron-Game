@@ -10,10 +10,6 @@ div {
     display: none;
 }
 
-#new-game {
-    width: 100%;
-}
-
 #leftbox { 
     float:left;
     width:50%; 
