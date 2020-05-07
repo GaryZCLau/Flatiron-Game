@@ -129,6 +129,10 @@ h1 {
 
 #player-name {
     font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-shadow: 2px 2px black
+
+    
 }
 
 #player-img {
@@ -172,9 +176,9 @@ li {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 800;
-    height: 40px;
+    height: 25px;
     vertical-align: middle;
-    display: table-cell;
+    display: table-caption;
     padding: 3px;
     border: solid 3px #ffffff;
 }
