@@ -107,7 +107,6 @@ h1 {
 }
 
 #gameplay {
-    background: url("mod3-front/backgrounds/flatiron.png");
     background-repeat: no-repeat;
     background-size: auto;
     text-align: center;
@@ -140,23 +139,33 @@ h1 {
     width: 236px
 }
 
+/* #story{
+    background-image: url('backgrounds/storybox.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+} */
+
 #event-string {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-size: 10pt;
-    width: 65%;
+    width: 75%;
+    height: 300px;
     margin-left:auto; 
-    margin-right:auto;   
+    margin-right:auto;  
+    background-image: url('backgrounds/storybox.png');
+    background-repeat: no-repeat;
+    background-size: auto; 
+    display: block;
 }
 
 ul {
     text-align: center;
     list-style-type: none;
-    margin-top: 0px
 }
 
 .choices-ul {
-    width: 95%;
+    width: 87%;
     display: table;
 }
 
@@ -165,16 +174,17 @@ ul {
 }
 
 li {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-family: 'Roboto Mono', monospace;
     font-size: 9pt;
     background-color: #362f2d;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 800;
-    height: 40px;
+    height: 25px;
+    text-align: center;
     vertical-align: middle;
-    display: table-cell;
+    display: caption;
     padding: 3px;
     border: solid 3px #ffffff;
 }
