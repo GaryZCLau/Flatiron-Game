@@ -1,5 +1,3 @@
-
-    
 // START QUERY SELECTORS
 
 // select div displaying current gamestate
@@ -9,7 +7,7 @@ let mainDiv = document.querySelector('#main')
 
         // select start button
         let startButton = document.querySelector('#start-game')
-    
+
     // end welcome screen query selectors
 
 
@@ -157,8 +155,9 @@ function playSound(soundfile) {
 
     // listens for user clicking start menu on welcome screen
     startButton.addEventListener('click', function() {
+        playSound('sounds/click.wav');
         // replace start with gameplay inner html
-        document.body.setAttribute("style", "background-image: url('backgrounds/flatiron3.jpg')")
+        document.body.setAttribute("style", "background-image: url('backgrounds/flatiron2.png')")
         // make player actions visible
         playerBox.setAttribute("style", "display: block");
         
