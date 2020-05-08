@@ -1,5 +1,8 @@
+TweenMax.to('#start-game', 0.5, {scale: 1.2, repeat: -1, ease: Back.easeOut, yoyo:true, yoyoEase:true});
 
-    
+
+
+
 // START QUERY SELECTORS
 
 // select div displaying current gamestate
@@ -241,7 +244,6 @@ function playSound(soundfile) {
             let choiceOne = document.createElement("li")
             choiceOne.innerText = eventObj[0].choices[0].option
             choicesUl.append(choiceOne)
-
             choiceOne.addEventListener("click", (evt) => {
                 // e2
                 getEventsObj()
@@ -507,6 +509,7 @@ function playSound(soundfile) {
                                                                                                                                     choiceOne.innerText = eventObj[15].choices[0].option
                                                                                                                                     choicesUl.append(choiceOne)
                                                                                                                                     choiceOne.addEventListener("click", (evt) => {
+                                                                                                                                        document.body.setAttribute("style", "background-image: url('backgrounds/home.jpg')")
                                                                                                                                         // e18
                                                                                                                                         getEventsObj()
                                                                                                                                         .then((eventObj) => {
@@ -1044,7 +1047,7 @@ function playSound(soundfile) {
                                                                                                                                                                                                                                                                                                                                                                                                     // npc
                                                                                                                                                                                                                                                                                                                                                                                                     npcName.innerText = eventObj[47].npc.name
                                                                                                                                                                                                                                                                                                                                                                                                     npcImage.src = `${eventObj[47].npc.image}`
-                                                                                                                                                                                                                                                                                                                                                                                                    npcDesc.innerText = "Loves Fortnite"
+                                                                                                                                                                                                                                                                                                                                                                                                    npcDesc.innerText = "Fortnite Lover"
                                                                                                                                                                                                                                                                                                                                                                                                     // choice
                                                                                                                                                                                                                                                                                                                                                                                                     choicesUl.innerHTML = ""
                                                                                                                                                                                                                                                                                                                                                                                                     // c51a
